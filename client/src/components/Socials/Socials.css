@@ -1,0 +1,31 @@
+.socials {
+    margin-top: 1%;
+  }
+  .socials p {
+    font-size: 14px;
+    font-weight: 100;
+  }
+
+  .socials a button {
+    border: none;
+        cursor: pointer;
+        appearance: none;
+        background-color: inherit;
+         transition: transform .7s ease-in-out;
+        margin-left:0px;
+  }
+  .socials a button:hover {
+    transform: scale(110%);
+  }
+
+  .socials button {
+    border: none;
+        cursor: pointer;
+        appearance: none;
+        background-color: inherit;
+         transition: transform .7s ease-in-out;
+        margin-left:0px;
+  }
+  .socials button:hover {
+    transform: scale(110%);
+  }
