@@ -10,7 +10,7 @@ class CountDown extends Component {
       days: 0,
       minutes: 0,
       hours: 0,
-      secounds: 0,
+      seconds: 0,
       time_up: ""
     };
     this.x = null;
@@ -43,7 +43,7 @@ class CountDown extends Component {
     }
   }
   componentDidMount() {
-    this.deadline = new Date("Nov 1, 2023 00:00:00").getTime();
+    this.deadline = new Date("Dec 1, 2023 00:00:00").getTime();
 
     this.x = setInterval(this.count, 1000);
   }
@@ -70,7 +70,7 @@ class CountDown extends Component {
             <span className="text">Minutes</span>
           </div>
         </div>
-        <div className="col-4">
+        <div className="col-3">
           <div className="box">
             <p id="second">{seconds}</p>
             <span className="text">Seconds</span>

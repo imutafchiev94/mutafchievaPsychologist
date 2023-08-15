@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
        <div className="container">
-        <h1>
+        <h1 className="comingSoon">
           Психолог Ивет Мутафчиева
           <br />
           Очаквайте скоро

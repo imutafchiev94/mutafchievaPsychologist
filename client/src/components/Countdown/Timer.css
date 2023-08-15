@@ -1,8 +1,8 @@
 #countdown {
-    width: 250px;
+    width: 400px;
     padding: 10px;
     background-color: rgba(255, 255, 255, 0.1);
-    display: inline-block;
+    display: flex;
     text-align: center;
     margin: auto;
   }
@@ -31,8 +31,9 @@
       font-size: 58px;
     }
     #countdown {
-      width: 350px;
+      width: 400px;
       padding: 20px;
+      padding-right: 100px; 
     }
   }
   

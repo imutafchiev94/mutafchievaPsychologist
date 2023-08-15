@@ -18,7 +18,7 @@
     transform: scale(110%);
   }
 
-  .socials button {
+  .socials .email {
     border: none;
         cursor: pointer;
         appearance: none;
@@ -28,4 +28,14 @@
   }
   .socials button:hover {
     transform: scale(110%);
+  }
+
+  .socials .modal {
+    background: none;
+  }
+
+  .socials h5 {
+    color: #fff;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
   }
