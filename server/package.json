@@ -4,7 +4,8 @@
   "description": "My wifes professional site.",
   "main": "index.js",
   "scripts": {
-    "start": "tsc && node dist/src/app.js",
+    "start": "node dist/src/app.js",
+    "build": "tsc",
     "dev": "nodemon src/app.ts"
   },
   "keywords": [
