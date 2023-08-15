@@ -1,16 +1,16 @@
 {
   "name": "mutafchievapsychologist",
   "version": "1.0.0",
-  "description": "My wifes proffessional site.",
+  "description": "My wifes professional site.",
   "main": "index.js",
   "scripts": {
-    "start": "node dist/app.js",
+    "start": "tsc && node dist/src/app.js",
     "dev": "nodemon src/app.ts"
   },
   "keywords": [
     "Psychologist",
     "Psychology",
-    "Proffessional",
+    "Professional",
     "Web",
     "Site"
   ],
@@ -18,10 +18,18 @@
   "license": "ISC",
   "dependencies": {
     "@types/express": "^4.17.17",
+    "cloudinary": "^1.40.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
     "express": "^4.18.2",
+    "heroku": "^8.1.9",
+    "mongoose": "^7.4.3",
+    "nodemailer": "^6.9.4",
     "typescript": "^5.1.6"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.13",
+    "@types/nodemailer": "^6.4.9",
     "nodemon": "^3.0.1",
     "ts-node": "^10.9.1"
   }
