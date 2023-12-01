@@ -17,11 +17,15 @@
     font-size: 20px;
     font-weight: bold;
     margin: 0;
+    color: #fff;
   }
   #countdown .box .text {
     font-size: 12px;
     font-family: sans-serif;
+    color: #fff;
   }
+
+  
   
   @media (min-width: 768px) {
     .container {
@@ -34,6 +38,21 @@
       width: 400px;
       padding: 20px;
       padding-right: 100px; 
+    }
+  }
+  
+
+  @media (max-width: 768px) {
+    .container {
+      width: 780px;
+    }
+    h1 {
+      font-size: 58px;
+    }
+    #countdown {
+      width: 300px;
+      padding: 20px;
+      padding-right: 70px; 
     }
   }
   

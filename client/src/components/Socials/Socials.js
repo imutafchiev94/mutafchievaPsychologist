@@ -7,6 +7,7 @@ function Socials() {
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
+    const [security, setSecurity] = useState('');
     const [response, setResponse] = useState('');
     const [alert, setAlert] = useState(true);
     
@@ -16,9 +17,9 @@ function Socials() {
         const requestOptions = {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({firstName: firstName, lastName: lastName, email: email, message: message})
+            body: JSON.stringify({firstName: firstName, lastName: lastName, email: email, message: message, security: security})
         };
-        fetch('http://localhost:8080/api/comingsoon/', requestOptions)
+        fetch('https://mutafchieva-psychologist-3bda4581112b.herokuapp.com/api/comingsoon/', requestOptions)
         .then(response => response.json())
         .then(data => setResponse(data.Message));
 
@@ -37,10 +38,7 @@ function Socials() {
 
     return (
         <div className="socials">
-            <div className="alert alert-success alert-dismissible fade show" hidden={alert} role="alert">
-                {response}
-                <button type="button" className="btn-close" aria-label="Close" onClick={() => setAlert(true)}></button>
-            </div>
+            
             <h5>Можете да ме откриете в социалните мрежи за повече информация</h5>
             <a href="https://www.facebook.com/profile.php?id=100063631506061">
                 <button>
@@ -63,11 +61,14 @@ function Socials() {
                 <div className="modal-dialog">
                     <div className="modal-content">
                         <div className="modal-header">
-                            <h5 className="modal-title" id="sendEmailLabel">Изпратете ми email!</h5>
-                            <button type="button" className="btn-close"  data-bs-dismiss="modal" aria-label="Close"></button>
+                            <h4 className="modal-title" id="sendEmailLabel">Изпратете ми email!</h4>
+                            <button type="button" className="btn-close"  data-bs-dismiss="modal" aria-label="Close" onClick={() => {setAlert(true)}}></button>
                         </div>
+                        <div className="alert alert-success alert-dismissible fade show" hidden={alert} role="alert">
+                            {response}
+                            <button type="button" className="btn-close" aria-label="Close" onClick={() => setAlert(true)}></button>
+                                </div>
                         <div className="modal-body">
-                            
                                 <div className="mb-3">
                                     <label htmlFor="firstName" className="form-label">Име</label>
                                     <input type="text" name="firstName" className="form-control" id="firstName" onChange={event => setFirstName(event.target.value)} value={firstName} />
@@ -84,11 +85,15 @@ function Socials() {
                                     <label htmlFor="message" className="form-label">Съобщение</label>
                                     <textarea name="message" className="form-control" id="message" rows="3" onChange={event => setMessage(event.target.value)} value={message} />
                                 </div>
+                                <div className="mb-3 security">
+                                    <label htmlFor="security" className="form-label">Security</label>
+                                    <input type="text" name="security" className="form-control" id="security" onChange={event => setSecurity(event.target.value)} value={security} />
+                                </div>
                                 <div className="modal-footer">
-                                    <button type="submit" className="btn btn-primary" data-bs-dismiss="modal" onClick={sendEmail}>
+                                    <button type="submit" className="btn btn-primary" onClick={sendEmail}>
                                         Изпрати
                                     </button>
-                                    <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">
+                                    <button type="button" className="btn btn-secondary" data-bs-dismiss="modal" onClick={() => {setAlert(true)}}>
                                         Затвори
                                     </button>
                                 </div>

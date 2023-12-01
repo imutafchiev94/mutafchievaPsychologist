@@ -3,10 +3,12 @@
 body {
   color: #fff;
   font-family: "Roboto Condensed", sans-serif;
-  background-image: url(https://res.cloudinary.com/binarybook/image/upload/v1691878720/Clinical-Psychologists-edited-scaled_aogbay.jpg);
-  background-position: top top;
-  background-size: cover;
+  background-image: url(https://res.cloudinary.com/dxqw22dc1/image/upload/v1692176541/Clinical-Psychologists-edited-scaled_lpciqr.jpg);
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
   margin: 0;
+  height: 100vh;
 }
 
 .App {
@@ -57,3 +59,4 @@ h1 {
     font-size: 58px;
   }
 }
+
