@@ -2,6 +2,7 @@ import express from 'express';
 import 'dotenv/config'
 import router from '../routes';
 import cors from 'cors';
+import connect from '../config/mongooseConfig';
 
 const app = express();
 app.set('trust proxy', 1);
@@ -15,6 +16,8 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api', router);
+
+connect();
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
